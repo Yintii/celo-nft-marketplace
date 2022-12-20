@@ -35,9 +35,13 @@ export default function NFTDetails() {
   const { data: signer } = useSigner();
 
   const MarketplaceContract = useContract({
-    addressOrName: '0xf918e5B1a80568E4cF77969f249Ac4b79549C8E6',
+    addressOrName: MARKETPLACE_ADDRESS, 
     contractInterface: MarketplaceABI,
+		signerOrProvider: signer
   });
+
+
+  console.log("The type of the marketplace contract is: ", typeof(MarketplaceContract));
 
 
   async function fetchListing() {
