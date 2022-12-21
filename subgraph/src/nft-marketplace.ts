@@ -72,7 +72,7 @@ export function handleListingPurchased(event: ListingPurchased): void {
 }
 
 
-export function hanndleListingUpdated(event: ListingUpdated): void {
+export function handleListingUpdated(event: ListingUpdated): void {
 	//recreate the id
 	const id = event.params.nftAddress.toHex() +
     				 "-" +
