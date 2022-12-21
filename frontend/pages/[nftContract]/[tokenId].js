@@ -35,8 +35,8 @@ export default function NFTDetails() {
   const { data: signer } = useSigner();
 
   const MarketplaceContract = useContract({
-    addressOrName: MARKETPLACE_ADDRESS, 
-    contractInterface: MarketplaceABI,
+    address: MARKETPLACE_ADDRESS, 
+   	abi: MarketplaceABI,
 		signerOrProvider: signer
   });
 
